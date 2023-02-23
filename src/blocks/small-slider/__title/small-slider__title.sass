@@ -1,0 +1,9 @@
+@import '../../../pages/config'
+
+.small-slider__title
+  padding-top: $maxPadding
+  @extend %fontPlayfair
+  @include setLineClamp (2)
+  @include setFontStyle (400, 32px, 43px, 0)
+  @include for-tablet-landscape-up
+    padding-top: 0

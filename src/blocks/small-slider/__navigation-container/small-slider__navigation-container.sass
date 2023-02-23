@@ -1,0 +1,15 @@
+@import '../../../pages/config'
+
+.small-slider__navigation-container
+  grid-column: 2
+  grid-row: 3
+  display: flex
+  align-self: center
+  align-items: center
+  padding-left: 84px
+  max-width: calc($maxWidth - 552px)
+  @media (max-width: 990px)
+    grid-column: 1/3
+    grid-row: 3
+    justify-self: center
+    padding-left: 0

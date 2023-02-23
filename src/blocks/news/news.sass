@@ -1,0 +1,13 @@
+@import '../../pages/config'
+
+.news
+  width: 100%
+  max-width: $maxWidth
+  padding: 80px $maxPadding 90px
+  display: flex
+  flex-flow: row wrap
+  align-items: flex-end
+  justify-content: space-between
+  @include for-phone-only
+    padding: calc($minPadding * 2) $minPadding calc($minPadding * 3)
+    justify-content: center

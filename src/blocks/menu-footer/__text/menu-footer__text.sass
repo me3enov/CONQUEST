@@ -1,0 +1,10 @@
+@import '../../../pages/config'
+
+.menu-footer__text
+  @extend %widthWithIndents
+  @extend %overflow
+  display: block
+  @include setFontStyle (400, 12px, 14px, 0)
+  color: $white
+  @include for-tablet-landscape-up
+    max-width: 100%

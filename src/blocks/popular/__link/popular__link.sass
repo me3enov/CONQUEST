@@ -1,0 +1,16 @@
+@import '../../../pages/config'
+
+.popular__link
+  display: block
+  justify-self: end
+  padding-bottom: 7px
+  color: $gray444240
+  border-bottom: 1px solid $mediumBeige
+  @extend %widthWithIndents
+  @extend %overflow
+  @include setFontStyle (500, 16px, 19px, 0)
+  @include for-phone-only
+    justify-self: start
+    margin: $minPadding
+  &:hover,&:focus
+    @extend %link

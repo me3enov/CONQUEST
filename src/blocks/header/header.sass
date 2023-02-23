@@ -1,0 +1,15 @@
+@import '../../pages/config'
+
+.header
+  width: 100%
+  max-width: calc($pageWidth - ($minPadding * 2))
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: space-between
+  @include for-tablet-landscape-up
+    max-width: calc($maxWidth - ($maxPadding * 2))
+  @include for-phone-only
+    flex-flow: column wrap
+    justify-content: center
+    padding-bottom: 20px

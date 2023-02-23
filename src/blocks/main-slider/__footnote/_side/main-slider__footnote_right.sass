@@ -1,0 +1,17 @@
+@import '../../../../pages/config'
+
+.main-slider__footnote_right
+  display: none
+  align-self: start
+  grid-row: 3
+  grid-column: 5
+  margin-left: -85px
+  padding-left: 65px
+  @media (min-width: 1080px)
+    display: block
+  @include for-phone-only
+    display: block
+  @media (max-width: 600px)
+    display: none
+  &:after
+    @include createDash (50px, 10px, $left: true, $right: false)

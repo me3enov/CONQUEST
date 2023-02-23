@@ -1,0 +1,12 @@
+@import '../../../pages/config'
+
+.menu-footer__sections-list
+  width: 100%
+  max-width: calc($pageWidth - ($minPadding * 2))
+  display: flex
+  flex-flow: row wrap
+  align-items: flex-start
+  justify-content: flex-start
+  padding: 0 $maxPadding
+  @include for-tablet-landscape-up
+    max-width: calc($maxWidth - ($maxPadding * 2))

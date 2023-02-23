@@ -1,0 +1,16 @@
+@import '../../../pages/config'
+
+.card__link
+  max-width: 330px
+  position: relative
+  margin-top: 21px
+  padding-left: 48px
+  @extend %overflow
+  @extend %fontPrata
+  @include setFontStyle (400, 16px, 21px, 0)
+  &:after
+    @include createDash (30px, 10px, $left: true, $right: false)
+  &:hover,&:focus
+    @extend %link
+  &:hover:after,&:focus:after
+    background-color: $accent

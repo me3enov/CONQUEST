@@ -1,0 +1,7 @@
+@import '../../../../pages/config'
+
+.social-links-menu__button_twitter
+  @include createButton(22px, 17px)
+  @include setBackgroundSvg ('../assets/images/icons/twitter/twitter.svg', 22px, 17px)
+  &:focus, &:hover
+    @include setBackgroundSvg ('../assets/images/icons/twitter/twitter_active.svg', 22px, 17px)

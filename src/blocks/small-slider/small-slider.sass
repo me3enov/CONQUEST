@@ -1,0 +1,27 @@
+@import '../../pages/config'
+
+.small-slider
+  width: 100%
+  position: relative
+  display: grid
+  grid-template-columns: 468px auto
+  grid-template-rows: 54px auto 54px
+  overflow: hidden
+  @media (max-width: 990px)
+    grid-template-columns: 400px auto
+    grid-template-rows: 54px auto 100px
+  &:after
+    z-index: -1
+    top: -233px
+    right: -145px
+    @include createAfter(365px, 365px, '')
+    transform: rotate(151.65deg)
+    @include setBackgroundSvg ('../assets/images/icons/ellipse.svg', 365px, 365px)
+  &:before
+    z-index: -1
+    top: 12px
+    right: -524px
+    @include createBefore(744px, 744px, '')
+    transform: rotate(151.65deg)
+    @include setBackgroundSvg ('../assets/images/icons/ellipse.svg', 744px, 744px)
+

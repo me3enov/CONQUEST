@@ -1,0 +1,7 @@
+@import '../../../../pages/config'
+
+.social-links-menu__button_instagram
+  @include createButton(23px, 23px)
+  @include setBackgroundSvg ('../assets/images/icons/instagram/instagram.svg', 23px, 23px)
+  &:focus, &:hover
+    @include setBackgroundSvg ('../assets/images/icons/instagram/instagram_active.svg', 23px, 23px)

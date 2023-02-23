@@ -1,0 +1,12 @@
+@import '../../../pages/config'
+
+.menu__list
+  max-width: $pageWidth
+  display: flex
+  flex-flow: row nowrap
+  @include for-tablet-landscape-up
+    max-width: calc($maxWidth - ($maxPadding * 2))
+    padding: 0
+  @include for-phone-only
+    padding: $minPadding
+    flex-wrap: wrap

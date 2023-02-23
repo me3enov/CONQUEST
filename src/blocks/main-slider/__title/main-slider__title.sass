@@ -1,0 +1,11 @@
+@import '../../../pages/config'
+
+.main-slider__title
+  position: relative
+  padding-left: 65px
+  margin-left: -65px
+  @extend %fontPlayfair
+  @include setLineClamp (2)
+  @include setFontStyle (400, 45px, 60px, 0)
+  &:after
+    @include createDash (50px, 29px, $left: true, $right: false)

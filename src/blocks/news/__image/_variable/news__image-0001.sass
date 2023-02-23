@@ -1,0 +1,13 @@
+@import '../../../../pages/config'
+
+.news__image-0001
+  width: 242px
+  height: 228px
+  grid-row: 1
+  grid-column: 1
+  @include setBackgroundImage ('../assets/images/images/news/small-images/image-0001/news__small-image-0001', no-repeat, center, cover)
+  @include for-phone-only
+    width: 220px
+    height: 180px
+  @media (max-width: 539px)
+    width: 200px

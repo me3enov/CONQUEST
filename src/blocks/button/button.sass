@@ -1,0 +1,19 @@
+@import '../../pages/config'
+
+.button
+  max-width: calc($pageWidth - ($minPadding * 2))
+  position: relative
+  background-color: $gray444240
+  color: $white
+  display: block
+  padding: 25px 38px
+  text-align: center
+  cursor: pointer
+  @include setFontStyle (500, 12px, 14px, 0.05em)
+  @include createButton(auto, 64px)
+  @extend %overflow
+  @extend %uppercase
+  @include for-tablet-landscape-up
+    max-width: calc($maxWidth - ($maxPadding * 2))
+  &:focus, &:hover
+    background-color: $accent

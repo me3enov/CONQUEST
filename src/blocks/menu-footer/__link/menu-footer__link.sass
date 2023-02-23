@@ -1,0 +1,12 @@
+@import '../../../pages/config'
+
+.menu-footer__link
+  @extend %widthWithIndents
+  @extend %overflow
+  display: block
+  @include setFontStyle (400, 12px, 14px, 0)
+  color: $white
+  @include for-tablet-landscape-up
+    max-width: 100%
+  &:hover,&:focus
+    color: $accent

@@ -1,0 +1,11 @@
+@import '../../../pages/config'
+
+.news__link
+  max-width: 380px
+  @extend %overflow
+  @include setFontStyle (700, 16px, 27px, 0)
+  color: $ultraDark
+  @include for-tablet-landscape-up
+    max-width: 100%
+  &:hover,&:focus
+    color: $accent

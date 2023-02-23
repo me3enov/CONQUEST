@@ -1,0 +1,7 @@
+@import '../../../../pages/config'
+
+.menu-icons__button_likes
+  @include createButton(19px, 16px)
+  @include setBackgroundSvg ('../assets/images/icons/like/like.svg', 19px, 16px)
+  &:focus, &:hover
+    @include setBackgroundSvg ('../assets/images/icons/like/like_active.svg', 19px, 16px)

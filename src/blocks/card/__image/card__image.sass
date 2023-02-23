@@ -1,0 +1,7 @@
+@import '../../../pages/config'
+
+.card__image
+  margin-left: -12px
+  &:after
+    @include createAfter(312px, 312px, '')
+    @include setBackgroundSvg ('../assets/images/icons/ellipse.svg', 312px, 312px)

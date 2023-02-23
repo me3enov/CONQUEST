@@ -1,0 +1,13 @@
+@import '../../../pages/config'
+
+.news__images-container
+  display: grid
+  grid-template-columns: repeat(auto-fit, auto)
+  grid-template-rows: 228px
+  align-items: center
+  gap: 10px
+  @include for-phone-only
+    grid-template-columns: 220px
+    grid-template-rows: 180px
+  @media (max-width: 539px)
+    grid-template-columns: 200px

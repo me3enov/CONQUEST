@@ -1,0 +1,18 @@
+@import '../../pages/config'
+
+.logo
+  max-width: 100%
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  @extend %transition
+  @include for-tablet-landscape-up
+    max-width: calc($maxWidth - ($maxPadding * 2))
+  &:focus, &:hover
+    transform: scale(1.04)
+  &:focus .logo__text,
+  &:hover .logo__text,
+  &:focus .logo__path,
+  &:hover .logo__path
+    fill: $accent
+    color: $accent

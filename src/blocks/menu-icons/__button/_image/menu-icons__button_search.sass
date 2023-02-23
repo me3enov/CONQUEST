@@ -1,0 +1,7 @@
+@import '../../../../pages/config'
+
+.menu-icons__button_search
+  @include createButton(16px, 16px)
+  @include setBackgroundSvg ('../assets/images/icons/search/search.svg', 16px, 16px)
+  &:focus, &:hover
+    @include setBackgroundSvg ('../assets/images/icons/search/search_active.svg', 16px, 16px)
