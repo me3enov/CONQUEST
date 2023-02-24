@@ -4,13 +4,17 @@ import { MainMenuItem } from '../components/MainMenuItem';
 import { IconsMenuItem } from '../components/IconsMenuItem';
 import { Card } from '../components/Card';
 import { SocialIconsItem } from '../components/SocialIconsItem';
+import { SmallSlide } from '../components/SmallSlide';
 import { MenuFooterItem } from '../components/MenuFooterItem';
 import { MenuFooterSection } from '../components/MenuFooterSection';
 import { Section } from '../components/Section';
 
+import { activateSmallSlider } from '../untils/activateSmallSlider';
+
 const menu = Object.values(dataForPage.menu);
 const iconsMenu = Object.values(dataForPage.iconsMenu);
 const products = Object.values(dataForPage.popularProducts);
+const smallSlides = Object.values(dataForPage.smallSlider);
 const socialIcons = Object.values(dataForPage.socialIcons);
 const footerMenu = Object.values(dataForPage.footerMenu);
 
@@ -32,6 +36,12 @@ const createCard = (cardData) => {
   return card.generateCard();
 };
 
+// create new small slider
+const createSmallSlide = (sliderData) => {
+    const smallSlider = new SmallSlide(sliderData);
+    return smallSlider.generateSmallSlide();
+};
+
 // create new social icon
 const createSocialIconsItem = (itemData) => {
   const menuItem = new SocialIconsItem(itemData);
@@ -50,7 +60,7 @@ const createMenuFooterSection = (sectionData, itemsData) => {
   return menuSection.generateMenuFooterSection();
 };
 
-// all main menu items init
+// main menu items init
 const mainMenuItems = new Section(
   {
     renderer: (item) => {
@@ -63,7 +73,7 @@ const mainMenuItems = new Section(
   '.menu__list'
 );
 
-// all icons menu items init
+// icons menu items init
 const iconsMenuItems = new Section(
   {
     renderer: (item) => {
@@ -76,20 +86,33 @@ const iconsMenuItems = new Section(
   '.menu-icons__list'
 );
 
-// all cards init
+// cards init
 const cards = new Section(
+    {
+        renderer: (item) => {
+            // create card
+            const card = createCard(item);
+            // add card to the page
+            cards.addItem(card, 'append');
+        }
+    },
+    '.popular__list'
+);
+
+// small slider init
+const smallSlider = new Section(
   {
     renderer: (item) => {
       // create card
-      const card = createCard(item);
+      const slide = createSmallSlide(item);
       // add card to the page
-      cards.addItem(card, 'append');
+      smallSlider.addItem(slide, 'append');
     }
   },
-  '.popular__list'
+  '.small-slider__list'
 );
 
-// all social icons init
+// social icons init
 const socialIconsItems = new Section(
   {
     renderer: (item) => {
@@ -102,7 +125,7 @@ const socialIconsItems = new Section(
   '.social-links-menu__list'
 );
 
-// all footer menu sections init
+// footer menu sections init
 const footerMenuSection = new Section(
   {
     renderer: (item) => {
@@ -119,6 +142,9 @@ const footerMenuSection = new Section(
 mainMenuItems.renderItems(menu);
 iconsMenuItems.renderItems(iconsMenu);
 cards.renderItems(products);
+smallSlider.renderItems(smallSlides);
 socialIconsItems.renderItems(socialIcons);
 footerMenuSection.renderItems(footerMenu);
+
+activateSmallSlider();
 // FUNCTION END

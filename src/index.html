@@ -77,7 +77,7 @@
           <div class="main-slider__image-container">
             <div class="main-slider__circle"></div>
             <div class="main-slider__image product-image product-image_big-rado-0001"></div>
-            <p class="main-slider__footnote main-slider__footnote_left">22 000 ₽</p>
+            <p class="main-slider__footnote main-slider__footnote_left main-slider__footnote_ruble">22 000</p>
             <p class="main-slider__footnote main-slider__footnote_right">28 мм диаметр</p>
           </div>
           <!--image container end-->
@@ -100,19 +100,7 @@
         <div class="small-slider__square"></div>
         <!--section small list start-->
         <ul class="small-slider__list">
-          <li class="small-slider__item small-slider__item_active">
-            <div class="small-slider__image small-slider__image-0001"></div>
-            <!--info container start-->
-            <div class="small-slider__info-container">
-              <h2 class="small-slider__title">Подлинное качество</h2>
-              <p class="small-slider__text">
-                Все часы производятся в Швейцарии и имеют сертификаты качества.
-                Настоящие швейцарские часы — это предмет гордости и престижа.
-              </p>
-              <a class="button button_small-slider" target="_self" href="#">Смотреть каталог</a>
-            </div>
-            <!--info container end-->
-          </li>
+
         </ul>
         <!--section small list end-->
 
@@ -215,7 +203,10 @@
   <template id="card-template">
     <li class="card">
       <h3 class="card__title"></h3>
-      <p class="card__price"></p>
+      <p class="card__price-container">
+        <span class="card__price"></span>
+        <span class="card__currency"></span>
+      </p>
       <div class="card__image product-image"></div>
       <a class="card__link" target="_self"></a>
     </li>
@@ -224,7 +215,7 @@
 
   <!-- small slider template start-->
   <template id="small-slider-template">
-    <li class="small-slider__item small-slider__item_active">
+    <li class="small-slider__item">
       <div class="small-slider__image"></div>
       <!--info container start-->
       <div class="small-slider__info-container">

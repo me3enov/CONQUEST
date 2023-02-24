@@ -1,8 +1,10 @@
 .small-slider__item
+  grid-row: 1
+  grid-column: 1
   display: flex
-  visibility: visible
-  opacity: 1
+  visibility: hidden
+  opacity: 0
   flex-flow: row wrap
   align-items: center
   justify-content: center
-  @extend %transition
+  transition: .7s

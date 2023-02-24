@@ -38,21 +38,21 @@ export const dataForPage = {
   popularProducts: {
     [uuid()]: {
       title: 'RADO',
-      price: '65 300 ₽',
+      price: '65 300',
       imageClass: 'product-image_small-rado-0002',
       linkText: 'Подробнее',
       link: '#'
     },
     [uuid()]: {
       title: 'BVLGARI',
-      price: '81 700 ₽',
+      price: '81 700',
       imageClass: 'product-image_small-bvlgari-0001',
       linkText: 'Подробнее',
       link: '#'
     },
     [uuid()]: {
       title: 'BVLGARI',
-      price: '72 700 ₽',
+      price: '72 700',
       imageClass: 'product-image_small-bvlgari-0002',
       linkText: 'Подробнее',
       link: '#'
