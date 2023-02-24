@@ -1,12 +1,10 @@
-@import '../../../pages/config'
-
 .menu__link
-  @extend %widthWithIndents
-  @extend %overflow
   display: block
-  @include setFontStyle (400, 14px, 16px, 0)
   padding: 5px 0
   color: $gray555248
+  @extend %widthWithIndents
+  @extend %overflow
+  @include setFontStyle (400, 14px, 16px, 0)
   @include for-tablet-landscape-up
     max-width: 100%
   &:hover,&:focus
