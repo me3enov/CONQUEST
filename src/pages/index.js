@@ -38,8 +38,8 @@ const createCard = (cardData) => {
 
 // create new small slider
 const createSmallSlide = (sliderData) => {
-    const smallSlider = new SmallSlide(sliderData);
-    return smallSlider.generateSmallSlide();
+  const smallSlider = new SmallSlide(sliderData);
+  return smallSlider.generateSmallSlide();
 };
 
 // create new social icon
@@ -88,15 +88,15 @@ const iconsMenuItems = new Section(
 
 // cards init
 const cards = new Section(
-    {
-        renderer: (item) => {
-            // create card
-            const card = createCard(item);
-            // add card to the page
-            cards.addItem(card, 'append');
-        }
-    },
-    '.popular__list'
+  {
+    renderer: (item) => {
+      // create card
+      const card = createCard(item);
+      // add card to the page
+      cards.addItem(card, 'append');
+    }
+  },
+  '.popular__list'
 );
 
 // small slider init
