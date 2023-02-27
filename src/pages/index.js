@@ -1,5 +1,5 @@
 import './main.global.sass';
-import { dataForPage } from '../assets/data/data';
+import { dataForPage } from '../assets/data/DATA';
 import { MainMenuItem } from '../components/MainMenuItem';
 import { IconsMenuItem } from '../components/IconsMenuItem';
 import { Card } from '../components/Card';
